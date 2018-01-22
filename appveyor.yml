@@ -17,6 +17,8 @@ init:
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GitHubToken):x-oauth-basic@github.com`n"
   - git config --global user.email "%GitHubUserEmail%"
   - git config --global user.name "%GitHubUserName%install:
+
+-install: 
   - cmd: git submodule update --init
   - ps: .\install-vsix-appveyor.ps1
 
