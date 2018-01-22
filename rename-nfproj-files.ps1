@@ -1,6 +1,1 @@
-Get-ChildItem "./*.nfproj" -Recurse |
-Foreach-object {
-    $OldName = $_.name; 
-    $NewName = $_.name -replace 'nfproj','csproj'; 
-    Rename-Item -Newname $NewName -Verbose;
-}
+Get-ChildItem -Filter "*.nfproj" -Recurse | Rename-Item -NewName { $_.name -replace 'nfproj','csproj' }
