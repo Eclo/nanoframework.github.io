@@ -18,7 +18,7 @@ init:
   - git config --global user.email "%GitHubUserEmail%"
   - git config --global user.name "%GitHubUserName%install:
 
--install: 
+install: 
   - cmd: git submodule update --init
   - ps: .\install-vsix-appveyor.ps1
 
