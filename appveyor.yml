@@ -16,9 +16,7 @@ init:
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GitHubToken):x-oauth-basic@github.com`n"
   - git config --global user.email "%GitHubUserEmail%"
-  - git config --global user.name "%GitHubUserName%"
-
-install:
+  - git config --global user.name "%GitHubUserName%install:
   - cmd: git submodule update --init
   - ps: .\install-vsix-appveyor.ps1
 
@@ -82,9 +80,10 @@ after_build:
       if(-Not $env:APPVEYOR_PULL_REQUEST_TITLE)
       {
         git clone https://github.com/nanoframework/nanoframework.github.io.git -b gh-pages origin_site -q
-        Copy-Item origin_site/.git _site -recurse
+        Copy-Item _site/* origin_site -recurse -Force
         CD origin_site
         git add -A 2>&1
         git commit -m "CI Updates" -q
         git push origin gh-pages -q
       }
+      
