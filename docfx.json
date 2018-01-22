@@ -4,15 +4,15 @@
       "src": [
         {
           "files": [
-            "**/CoreLibrary/*.csproj",
-            "**/nanoFramework.Runtime.Events/*.csproj",
-            "**/nanoFramework.Runtime.Native/*.csproj",
-            "**/Windows.Devices.Gpio/*.csproj",
-            "**/Windows.Devices.I2c/*.csproj",
-            "**/Windows.Devices.Pwm/*.csproj",
-            "**/Windows.Devices.SerialCommunication/*.csproj",
-            "**/Windows.Devices.Spi/*.csproj",
-            "**/Windows.Storage.Streams/*.csproj"
+            "CoreLibrary/source/*.csproj",
+            "nanoFramework.Runtime.Events/source/*.csproj",
+            "nanoFramework.Runtime.Native/source/*.csproj",
+            "Windows.Devices.Gpio/source/*.csproj",
+            "Windows.Devices.I2c/source/*.csproj",
+            "Windows.Devices.Pwm/source/*.csproj",
+            "Windows.Devices.SerialCommunication/source/*.csproj",
+            "Windows.Devices.Spi/source/*.csproj",
+            "Windows.Storage.Streams/source/*.csproj"
           ],
           "exclude": [
             "**/obj/**",
