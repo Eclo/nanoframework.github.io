@@ -1,4 +1,4 @@
-Get-ChildItem "./*.nfproj" -Recurse) |
+Get-ChildItem "./*.nfproj" -Recurse |
 Foreach-object {
     $OldName = $_.name; 
     $NewName = $_.name -replace 'nfproj','csproj'; 
